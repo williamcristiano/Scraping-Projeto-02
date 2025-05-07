@@ -21,7 +21,7 @@ Este projeto é uma implementação para realizar scraping no Mercado Livre, bus
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seuusuario/mercadolivre-scraping.git
+   git clone https://github.com/williamcristiano/Scraping-Projeto-02
    ```
 
 2. Instale as dependências necessárias:
