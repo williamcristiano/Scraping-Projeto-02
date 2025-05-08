@@ -7,11 +7,11 @@ from time import sleep
 import logging
 import pandas as pd
 from pathlib import Path
+from selenium.webdriver.chrome.options import Options
 
 class set_settings:
     def __init__(self,url,loja_nome):
         self.caminho_logs = Path(__file__).parent /"data_logs"
-
         self.nome_loja = loja_nome  
         self.URL = url
 
@@ -22,7 +22,9 @@ class set_settings:
         return logging.getLogger(__name__)
     
     def OpenBrowser(self)->webdriver.Chrome:
-        browser = webdriver.Chrome()
+        options = Options()
+        options.add_argument('--headless')
+        browser = webdriver.Chrome(options=options)
         browser.get(self.URL)
         return browser 
 
